@@ -1,0 +1,180 @@
+.contact {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px); /* Move the element down initially */
+  animation: floatInAnimation 1s ease-in-out forwards;
+}
+
+@keyframes floatInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact_container {
+  width: 60%;
+  height: auto;
+}
+
+.contact_container > h1 {
+  font-weight: bolder;
+}
+
+.contact_container > h1 > span {
+  color: #5e9e9f;
+}
+
+.hrtagc {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border: 0.5px dashed grey;
+}
+
+.contact_container_full {
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+  flex: 1;
+}
+
+.contact_container_left {
+  flex: 0.5;
+}
+
+.contact_container_right {
+  flex: 0.5;
+}
+
+.contact_container_left_tags {
+  background-color: #222222;
+  margin-top: 20px;
+  width: 90%;
+  border-radius: 15px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.contact_container_left_tags_icon {
+  padding-left: 20px;
+}
+.contact_container_left_tags > a {
+  text-decoration: none;
+  color: white;
+  padding-left: 20px;
+}
+
+.contact_container_left_tags > a:hover {
+  color: #5e9e9f;
+}
+
+.contact_container_right {
+  margin-top: 15px;
+}
+
+.contact_container_right > form > input {
+  background-color: #222222;
+  padding-left: 10px;
+  width: 180px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  color: white;
+}
+
+.inputtag {
+  margin-left: 25px;
+}
+
+.contact_container_right > form > textarea {
+  background-color: #222222;
+  border: none;
+  width: 91%;
+  border-radius: 15px;
+  margin-top: 25px;
+  padding-left: 10px;
+  height: 120px;
+  color: white;
+  padding-top: 5px;
+}
+
+.contact_container_right > form > button {
+  border-radius: 30px;
+  margin-top: 25px;
+  height: 40px;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Styles for mobile view go here */
+  .contact {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact_container {
+    width: 99%;
+  }
+
+  .hrtagc {
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    margin-left: 40px;
+  }
+
+  .contact_container > h1 {
+    text-align: center;
+  }
+  .contact_container_full {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact_container_left {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
+  .contact_container_left_tags {
+    width: 95%;
+    font-size: 20px;
+  }
+
+  .contact_container_right > form > input {
+    width: 89%;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+
+  .inputtag {
+    margin-left: 0px;
+  }
+
+  .contact_container_right > form > textarea {
+    margin-left: 15px;
+    width: 89%;
+  }
+
+  .contact_container_right > form > button {
+    margin-left: 15px;
+  }
+}

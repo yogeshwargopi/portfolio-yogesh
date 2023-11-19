@@ -1,0 +1,100 @@
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  opacity: 0;
+  transform: translateY(20px); /* Move the element down initially */
+  animation: floatInAnimation 1s ease-in-out forwards;
+}
+
+@keyframes floatInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projects_container {
+  width: 60%;
+  color: white;
+  text-decoration: none;
+  height: 500px; /* Set a minimum height to avoid content overflow */
+}
+
+.carousel_tag a {
+  text-decoration: none; /* Remove underline from anchor (a) tags inside .carousel-tag */
+}
+
+.card1 {
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 200px;
+}
+
+.card1 > img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%;
+  height: auto;
+}
+
+.carousel_tag {
+  height: 280px;
+}
+
+/* Add margin between carousel items */
+.carousel-item-padding {
+  margin-right: 10px;
+}
+
+/* Remove margin for the last item to prevent unnecessary space */
+.carousel-item-padding:last-child {
+  margin-right: 0;
+}
+
+.custom-dot-list-style {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.custom-dot-list-style button {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: white; /* White border */ /* Transparent background */
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Styles for mobile view go here */
+  .projects_container {
+    width: 95%;
+    text-align: center;
+    height: 550px;
+  }
+  .card1 {
+    width: 350px;
+    height: 230px;
+  }
+  .custom-dot-list-style {
+    margin-top: 30px;
+  }
+
+  .carousel_tag {
+    margin-top: 0px;
+  }
+}

@@ -1,0 +1,76 @@
+/* styles.css */
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px); /* Move the element down initially */
+  animation: floatInAnimation 1s ease-in-out forwards;
+}
+@keyframes floatInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scardion {
+  width: 70%;
+  margin-top: 10px;
+}
+.scardion_title {
+  font-size: 30px;
+}
+
+.scardion_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.scard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px;
+  width: 150px;
+  height: 180px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.scard:hover {
+  transform: scale(1.1);
+}
+
+.scard img {
+  width: 99%;
+  height: 130px;
+  background-color: white;
+}
+
+.scard-content {
+  padding: 16px;
+}
+
+.scard h3 {
+  margin: 0;
+  color: white;
+}
+.hrtag {
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border: 0.5px dashed grey;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Styles for mobile view go here */
+  .scardion {
+    width: 95%;
+  }
+}
