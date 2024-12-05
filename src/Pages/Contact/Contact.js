@@ -26,8 +26,8 @@ const Contact = () => {
       await emailjs.send(
         "yogesh_email",
         "yogesh_portfolio_mail_1",
-        formData
-        //"mq1VG-mzLO5X7c3wM"
+        formData,
+        "mq1VG-mzLO5X7c3wM"
       );
       setFormData({
         name: "",
